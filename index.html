@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>ADMCHECK · admissão mobile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- TOP BAR FIXA (MODO MOBILE) -->
+  <header class="mobile-header">
+    <h1>📋 ADMCHECK</h1>
+    <span class="versao">v1.0 · mobile</span>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL COM SCROLL -->
+  <main class="mobile-main">
+    <!-- ÁREA DE CADASTRO RÁPIDO -->
+    <div class="card cadastro-card">
+      <div class="input-group">
+        <input type="text" id="input-matricula" placeholder="Matrícula" class="input-mobile" autocomplete="off">
+        <input type="text" id="input-nome" placeholder="Nome completo" class="input-mobile" autocomplete="off">
+      </div>
+      <div class="button-grid">
+        <button class="btn-mobile btn-criar" id="btn-criar">➕ Criar</button>
+        <button class="btn-mobile btn-salvar" id="btn-salvar">💾 Salvar</button>
+        <button class="btn-mobile btn-carregar" id="btn-carregar">📂 Carregar</button>
+        <button class="btn-mobile btn-exportar" id="btn-exportar">📤 .txt</button>
+        <button class="btn-mobile btn-copiar" id="btn-copiar">📋 Copiar</button>
+      </div>
+    </div>
+
+    <!-- SIDEBAR CONVERTIDA EM LISTA HORIZONTAL + STATUS (MOBILE) -->
+    <div class="card funcionarios-card">
+      <div class="card-header">
+        <h2>👥 Funcionários</h2>
+        <span class="badge-count" id="func-count">0</span>
+      </div>
+      <div class="funcionarios-horizontal" id="lista-funcionarios">
+        <!-- renderizado via js -->
+      </div>
+    </div>
+
+    <!-- CHECKLIST ADMISSIONAL -->
+    <div class="card checklist-card" id="checklist-container">
+      <!-- conteúdo dinâmico -->
+    </div>
+  </main>
+
+  <!-- MODAL CONFIRMAÇÃO ESTILIZADO MOBILE -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h3>🗑️ Confirmar exclusão</h3>
+      <p>Esse funcionário será removido permanentemente.</p>
+      <div class="modal-actions">
+        <button class="btn-modal cancel" id="btn-cancelar-excluir">Cancelar</button>
+        <button class="btn-modal confirm" id="btn-confirmar-excluir">Excluir</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST PRA COPiar -->
+  <div id="toast" class="toast hidden">📋 Copiado com sucesso!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
