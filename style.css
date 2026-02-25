@@ -1,0 +1,362 @@
+/* style.css - MOBILE FIRST - DARK SLIM */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #0a0c10;
+  color: #f0f3f8;
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+
+/* topbar */
+.mobile-header {
+  background-color: #161a1f;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a2f38;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.mobile-header h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.versao {
+  font-size: 0.7rem;
+  color: #7b8ba3;
+  background: #262d36;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+/* cards principais */
+.mobile-main {
+  padding: 16px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: #13171d;
+  border-radius: 24px;
+  padding: 18px 16px;
+  border: 1px solid #262e38;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.input-mobile {
+  background: #1e242b;
+  border: 1px solid #323b47;
+  border-radius: 16px;
+  padding: 16px 18px;
+  font-size: 1rem;
+  color: #f0f4fa;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.input-mobile:focus {
+  border-color: #3b82f6;
+  background: #262f3a;
+}
+
+.input-mobile::placeholder {
+  color: #6f7c91;
+  font-weight: 300;
+}
+
+/* botões em grid 3x2 */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.btn-mobile {
+  background: #232a33;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d1ddeb;
+  border: 1px solid #35404e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.btn-mobile:active {
+  transform: scale(0.96);
+  background: #2f3a47;
+  border-color: #4b5b70;
+}
+
+/* cards internos */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.card-header h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #b7c3d2;
+}
+
+.badge-count {
+  background: #1f2a36;
+  padding: 4px 12px;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #b0c5de;
+}
+
+/* LISTA HORIZONTAL DE FUNCIONÁRIOS */
+.funcionarios-horizontal {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #3e4b5b #1b2128;
+  -webkit-overflow-scrolling: touch;
+}
+
+.funcionarios-horizontal::-webkit-scrollbar {
+  height: 5px;
+}
+.funcionarios-horizontal::-webkit-scrollbar-thumb {
+  background: #3a4555;
+  border-radius: 10px;
+}
+
+.item-funcionario {
+  background: #1d242d;
+  border-radius: 30px;
+  padding: 8px 14px 8px 16px;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #303b48;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.item-funcionario:active {
+  background: #29323f;
+}
+
+.info-func {
+  flex: 1;
+  overflow: hidden;
+}
+
+.matricula-item {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.nome-item {
+  font-size: 0.75rem;
+  color: #99a9c2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90px;
+}
+
+.status-badge {
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  transition: 0.2s;
+}
+.status-verde { background-color: #00c853; box-shadow: 0 0 8px #00c853cc; }
+.status-amarelo { background-color: #ffd600; box-shadow: 0 0 8px #ffd600cc; }
+.status-cinza { background-color: #6b7280; box-shadow: 0 0 6px #6b7280; }
+
+.btn-excluir-item {
+  background: transparent;
+  border: none;
+  color: #a5b3c9;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+  transition: 0.1s;
+}
+.btn-excluir-item:active {
+  color: #ff7b72;
+  transform: scale(1.2);
+}
+
+/* CHECKLIST */
+.checklist-card {
+  padding-bottom: 24px;
+}
+
+.categoria {
+  margin-top: 18px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #d1dbe8;
+  border-left: 4px solid #3b82f6;
+  padding-left: 12px;
+}
+
+.subcategoria {
+  margin: 16px 0 6px 8px;
+  font-weight: 500;
+  color: #9aafca;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.item-checklist {
+  background: #1a2129;
+  margin: 6px 0;
+  padding: 14px 16px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #2d3743;
+}
+
+.item-checklist input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  accent-color: #00c853;
+  border-radius: 8px;
+  transform: scale(1.1);
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.item-checklist label {
+  font-size: 0.95rem;
+  color: #dee5f0;
+  word-break: break-word;
+  flex: 1;
+}
+
+/* MODAL MOBILE */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  transition: 0.2s;
+}
+
+.modal {
+  background: #1d242e;
+  width: 85%;
+  max-width: 340px;
+  border-radius: 40px;
+  padding: 28px 24px;
+  border: 1px solid #3e4c5e;
+  box-shadow: 0 30px 40px #00000080;
+  text-align: center;
+}
+
+.modal h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #ffbaba;
+}
+
+.modal p {
+  margin: 10px 0 28px;
+  color: #a5b7ce;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-modal {
+  flex: 1;
+  background: #2b3440;
+  border: none;
+  border-radius: 40px;
+  padding: 16px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #d7e2f5;
+  border: 1px solid #414f60;
+  cursor: pointer;
+}
+
+.btn-modal.confirm {
+  background: #b91c1c;
+  color: white;
+  border-color: #b03e3e;
+}
+
+.btn-modal:active {
+  filter: brightness(0.8);
+}
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  right: 20px;
+  background: #1e2a37;
+  color: #c7dfff;
+  text-align: center;
+  padding: 18px;
+  border-radius: 60px;
+  font-weight: 600;
+  border: 1px solid #415570;
+  box-shadow: 0 8px 20px black;
+  z-index: 300;
+  transition: opacity 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.hidden {
+  display: none;
+}
