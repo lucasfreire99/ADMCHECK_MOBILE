@@ -29,7 +29,7 @@ Sistema mobile-first para controle de checklist de documentos admissionais, dese
 ## 📱 Como usar
 
 ### Acesse online
-[https://seu-usuario.github.io/admcheck-mobile](https://seu-usuario.github.io/admcheck-mobile)
+[ADMCHECK_MOBILE/](https://lucasfreire99.github.io/ADMCHECK_MOBILE/).
 
 ### Instalação local
 1. Clone o repositório
